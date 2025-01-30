@@ -18,14 +18,16 @@ const dataSymbole = '{}[]()*&^%$#@!:;,./<>?""`~_-+=^';
 //     console.log(e.target.id)
 //  })
 
+
+
 function generatepassword(){
     let data = [];
-    // if (lowercase.checked) data.push(...dataLowercase);
+     if (lowercase.checked) data.push(...dataLowercase);
     if(dataLowercase.checked)
     if (uppercase.checked) data.push(...dataUppercase);
     if (numbers.checked) data.push(...dataNumbers);
     if (symbols.checked) data.push(...dataSymbole);
-    console.log(data);
+    console.log(data[Math.random()]);
 
     }
 

@@ -394,8 +394,56 @@ let resultat16 = texte16.startsWith("Hello"); // true
 let texte17 = "Hello World";
 let resultat17 = texte17.substr(6, 5); // "World"
 
-
-
-
-
 //text-typing
+
+// Les Date
+
+const date1 = new Date();
+console.log(date1)
+
+const date2 = new Date("2025-01-31");
+//console.log(date2);
+const date3 = new Date();
+const year = date3.getFullYear()
+console.log(year);
+
+//format ISO
+
+//YYY-MM-DDTHH:MM:SSZ
+
+let date4 = new Date();
+
+const isoDate4 = date4.toISOString()
+const isoDate5 = date4.toLocaleDateString()
+console.log(isoDate5)
+
+
+//timestamp
+const date6 = new Date();
+const timestamp = Date.parse(date6);
+
+console.log(timestamp);
+
+function dateParser(chaine){
+  const date = new Date(chaine);
+  const dataFr = date.toLocaleDateString('fr-FR',{
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    weekday: "long"
+  });
+
+  return date
+}
+
+let daate = 1738230071000
+console.log(dateParser(timestamp));
+console.log(dateParser(daate));
+console.log(dateParser(date6));
+
+
+
+
